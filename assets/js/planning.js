@@ -86,16 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const [date, time] = p.time.split(' ');
 
-    const spanDate = document.createElement('span');
-    spanDate.textContent = `${date} `;
-    const smallTime = document.createElement('small');
-    smallTime.textContent = time;
-
+    const spanDate = createContents('span', `${date} `);
+    const smallTime = createContents('small', time);
     tdTime.appendChild(spanDate);
     tdTime.appendChild(smallTime);
 
     const tdName = createContents('td', p.name);
     const tdProgress = document.createElement('td');
+    
     const [done, goal] = p.done.split('/');
 
     const per = Math.floor(Number(done)*100/Number(goal));
