@@ -5,18 +5,50 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
-  <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen,projection" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
   <title>Juan base</title>
 </head>
 
 <body>
-  <div class="mui-container">
-    <div class="mui-panel">
-      <h1>My Title</h1>
-      <button class="mui-btn mui-btn--primary mui-btn--raised">My Button</button>
+  <nav>
+    <div class="nav-wrapper blue">
+      <div class="col">
+        <div style="font-size: 28px; text-align: center;">
+          <a href="/" style="text-decoration: none; color: white;">Juan</a>
+        </div>
+      </div>
     </div>
+  </nav>
+  <div class="container">
+    <ul>
+      <li>
+        <h4>Tài sản:</h4>
+        <div class="container">
+          <table class="responsive-table striped">
+            <thead>
+              <tr>
+                <th>
+                  No.
+                </th>
+                <th>
+                  Tên
+                </th>
+                <th>
+                  Giá
+                </th>
+              </tr>
+            </thead>
+            <tbody id="assets-data-body"></tbody>
+          </table>
+        </div>
+      </li>
+      <hr>
+    </ul>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="/assets/js/assets.js"></script>
 </body>
 
 </html>
