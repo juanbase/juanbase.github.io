@@ -1,4 +1,4 @@
-const timeFormat = 'HH:mm:ss DD-MM-YYYY';
+const timeFormat = 'DD-MM-YYYY HH:mm:ss';
 
 const currentDay = Number(moment().format('D'));
 
@@ -8,67 +8,67 @@ const articlesNum = 0;
 
 const articlesNumGoal = 1;
 
-const startDateFulltimeSalary = moment('00:00:00 10-05-2021', timeFormat).dayOfYear();
-const endDateFulltimeSalary = moment('00:00:00 10-06-2021', timeFormat).dayOfYear();
+const startDateFulltimeSalary = moment('10-05-2021 00:00:00', timeFormat).dayOfYear();
+const endDateFulltimeSalary = moment('10-06-2021 00:00:00', timeFormat).dayOfYear();
 
 document.addEventListener('DOMContentLoaded', () => {
   const plans = [
     {
-      time: '23:59:59 30-06-2021',
+      time: '30-06-2021 23:59:59',
       name: 'Học tiếng Anh',
       done: `${learningEnglishDay}/30`,
       pri: 3,
     },
     {
-      time: '23:59:59 20-06-2021',
+      time: '20-06-2021 23:59:59',
       name: 'Lương part-time',
       done: '260/750',
       pri: 4,
     },
     {
-      time: '23:59:59 10-06-2021',
+      time: '10-06-2021 23:59:59',
       name: 'Lương full time',
       done: `${moment().dayOfYear() - startDateFulltimeSalary}/${endDateFulltimeSalary - startDateFulltimeSalary}`,
       pri: 4,
     },
     {
-      time: '23:59:59 30-06-2021',
+      time: '30-06-2021 23:59:59',
       name: 'Trị mụn',
       done: `${(moment().week() - moment().startOf('M').week())}/4`,
       pri: 5,
     },
     {
-      time: '00:00:00 19-06-2021',
+      time: '19-06-2021 00:00:00',
       name: 'Làm biển số',
       done: `${currentDay - 1}/19`,
       pri: 5,
     },
     {
-      time: '05:00:00 26-06-2021',
+      time: '26-06-2021 05:00:00',
       name: 'Đi Vũng Tàu',
       done: `${currentDay - 1}/26`,
       pri: 5,
     },
     {
-      time: '23:59:59 30-06-2021',
+      time: '30-06-2021 23:59:59',
       name: 'Học nhào lộn',
       done: `${currentDay - 1}/30`,
       pri: 3,
     },
     {
-      time: '23:59:59 30-06-2021',
+      time: '30-06-2021 23:59:59',
       name: 'Học Guitar',
       done: `${currentDay - 1}/30`,
       pri: 3,
     },
     {
-      time: '23:59:59 30-06-2021',
+      time: '30-06-2021 23:59:59',
       name: 'Học nhảy',
       done: `${currentDay - 1}/30`,
       pri: 3,
     },
     {
-      time: '23:59:59 30-06-2021',
+      time: '30-06-2021 23:59:59',
       name: 'Viết blogs',
       done: `${articlesNum}/${articlesNumGoal}`,
       pri: 5,
