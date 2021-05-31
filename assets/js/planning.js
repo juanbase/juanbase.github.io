@@ -82,7 +82,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const planningTemplate = planningSorted.map(p => {
     const tr = document.createElement('tr');
 
-    const tdTime = createContents('td', p.time);
+    const tdTime = document.createElement('td');
+
+    const [date, time] = p.time.split(' ');
+
+    const spanDate = document.createElement('span');
+    spanDate.textContent = `${date} `;
+    const smallTime = document.createElement('small');
+    smallTime.textContent = time;
+
+    tdTime.appendChild(spanDate);
+    tdTime.appendChild(smallTime);
+
     const tdName = createContents('td', p.name);
     const tdProgress = document.createElement('td');
     const [done, goal] = p.done.split('/');
