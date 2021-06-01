@@ -21,8 +21,7 @@ fetch("https://api.ipify.org/?format=json")
   .then(({ ip }) => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        (position) => {
-          console.log(position);
+        ({ coords: { latitude: lat, longitude: long } }) => {
           noteAccessPoint({ ip, lat, long });
         }
       );
