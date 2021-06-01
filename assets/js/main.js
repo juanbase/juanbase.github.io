@@ -19,6 +19,7 @@ function noteAccessPoint({ ip, lat, long }) {
 fetch("https://api.ipify.org/?format=json")
   .then((d) => d.json())
   .then(({ ip }) => {
+    console.log(navigator.geolocation);
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         ({ coords: { latitude: lat, longitude: long } }) => {
